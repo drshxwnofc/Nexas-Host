@@ -1,0 +1,68 @@
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* GLASSMORPHISM CARD */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* LINKS */
+.navbar .menu a {
+    text-decoration: none;
+    color: #0ff;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+.navbar .menu a:hover {
+    color: #ff0;
+}
+
+/* BUTTONS */
+button {
+    background: #0ff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    background: #ff0;
+}
+
+/* LOADING ANIMATION */
+@keyframes liquid {
+    0%,100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+.liquid {
+    display: inline-block;
+    animation: liquid 2s infinite ease-in-out;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .navbar { flex-direction: column; }
+    .navbar .menu a { margin: 0.5rem 0; }
+}
